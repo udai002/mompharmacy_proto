@@ -1,0 +1,11 @@
+service storesData {
+    rpc storeDetails (StoreRequest) returns (storeResponse);
+}
+
+message StoreRequest {
+    string storeId =1;
+}
+
+message storeResponse {
+    string storeName =1 ;
+}
