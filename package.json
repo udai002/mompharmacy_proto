@@ -1,14 +1,22 @@
 {
-  "name": "mompharmacy_protos",
-  "version": "1.0.0",
+  "name":"mom-protos",
+  "version": "1.0.7",
   "description": "this is protos for grpc",
-  "main": "index.js",
+  "main": "dist/index.js",    
+  "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist",
+    "protos",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/index.js",
-    "build": "tsc",
-    "dev": "concurrently \"tsc -w\"  \"nodemon dist/index.js\" "
+    "dev": "concurrently \"tsc -w\"  \"nodemon dist/index.js\" ",
+    "generate": "node scripts/generate.js" , 
+     "build": "npm run generate && tsc"
   },
   "repository": {
     "type": "git",
@@ -25,6 +33,8 @@
     "@grpc/proto-loader": "^0.8.0"
   },
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "concurrently": "^9.2.1",
+    "grpc-tools": "^1.13.0",
+    "ts-proto": "^2.7.7"
   }
 }
