@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package warehouseData;
+
+service warehouseData {
+    rpc warehouseDetails (warehouseRequest) returns (warehouseResponse);
+}
+
+message warehouseRequest {
+    
+}
+
+message warehouseResponse {
+    string warehouseId = 1;
+    string warehouseName = 2;
+}
