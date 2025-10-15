@@ -35,4 +35,5 @@ server.bindAsync("0.0.0.0:5000" , grpc.ServerCredentials.createInsecure() , (err
 export {StoreProto}
 
 
-export * from './generated/stores.js'
+export * as Stores from './generated/stores.js'
+export * as Warehouse from './generated/warehouse.js'
