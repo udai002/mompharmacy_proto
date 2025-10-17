@@ -1,0 +1,18 @@
+syntax="proto3";
+
+package customerData;
+
+service customerData{
+
+    rpc customerDetails (CustomerRequest) returns (CustomerResponse);
+
+}
+message CustomerRequest{
+
+}
+
+message CustomerResponse{
+
+    string customerId=1;
+
+}

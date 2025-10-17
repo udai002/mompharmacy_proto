@@ -37,3 +37,4 @@ export {StoreProto}
 
 export * as Stores from './generated/stores.js'
 export * as Warehouse from './generated/warehouse.js'
+export * as Customer from './generated/customer.js'
