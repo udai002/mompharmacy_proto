@@ -1,0 +1,42 @@
+syntax = "proto3" ;
+
+package productDetails ;
+
+import "google/protobuf/timestamp.proto";
+
+service productData{
+    rpc productDetails (productRequest) returns (productResponse);
+}
+
+message productRequest{
+    string productId=1;
+}
+
+message productResponse{
+    string name = 1 ;
+    string type = 2;
+    string brandName = 3;
+    string batchNumber = 4;
+    string supplierName = 5;
+    string category = 6;
+    string subCategory = 7;
+    string storageInstructions = 8;
+    string quantityPerUnit = 9;
+    string gst = 10;
+    string hsnCode = 11;
+    string discount = 12;
+    google.protobuf.Timestamp updatedOn = 13;
+    google.protobuf.Timestamp manufactureDate = 14;
+    double sellingPrice = 15;
+    string imageUrl = 16;
+    map<string, string> details = 17;
+    string qrCodeUrl = 18;
+    string scientificName = 19;
+    string strength = 20;
+    string dosage = 21;
+    string dosageTiming = 22;
+    string genderUse = 23;
+    string controlSubstance = 24;
+    string prescriptionNeeded = 25;
+    string coldChainFlag = 26;
+}
