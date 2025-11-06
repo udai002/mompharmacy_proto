@@ -1,6 +1,6 @@
 {
   "name":"mom-protos",
-  "version": "1.0.7",
+  "version": "1.0.11",
   "description": "this is protos for grpc",
   "main": "dist/index.js",    
   "types": "dist/index.d.ts",
@@ -16,7 +16,7 @@
     "start": "node dist/index.js",
     "dev": "concurrently \"tsc -w\"  \"nodemon dist/index.js\" ",
     "generate": "node scripts/generate.js" , 
-     "build": "npm run generate && tsc"
+     "build": "tsc"
   },
   "repository": {
     "type": "git",

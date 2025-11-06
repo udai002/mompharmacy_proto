@@ -27,7 +27,7 @@ const StoreProto = grpcObject.storesData;
 
 
 const server = new grpc.Server()
-server.bindAsync("0.0.0.0:5000" , grpc.ServerCredentials.createInsecure() , (err , data)=>{
+server.bindAsync("localhost:50051" , grpc.ServerCredentials.createInsecure() , (err , data)=>{
     if(err)console.log(err)
     console.log(data)
 })
@@ -38,3 +38,5 @@ export {StoreProto}
 export * as Stores from './generated/stores.js'
 export * as Warehouse from './generated/warehouse.js'
 export * as Customer from './generated/customer.js'
+export * as Products from './generated/product.js'
+export * as ProductInventory from './generated/productInventory.js'

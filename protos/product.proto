@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package productData ;
+
+service productData {
+   rpc productDetails (ProductRequest) returns (ProductReponse);
+}
+
+message ProductRequest {
+    string productId = 1;
+}
+
+message ProductReponse {
+    string productName = 1 ;
+    string price = 2 ;
+}
