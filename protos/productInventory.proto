@@ -16,7 +16,6 @@ message productResponse{
     string name = 1 ;
     string type = 2;
     string brandName = 3;
-    string batchNumber = 4;
     string supplierName = 5;
     string category = 6;
     string subCategory = 7;
@@ -25,7 +24,6 @@ message productResponse{
     string gst = 10;
     string hsnCode = 11;
     string discount = 12;
-    google.protobuf.Timestamp updatedOn = 13;
     google.protobuf.Timestamp manufactureDate = 14;
     double sellingPrice = 15;
     string imageUrl = 16;
@@ -39,4 +37,5 @@ message productResponse{
     string controlSubstance = 24;
     string prescriptionNeeded = 25;
     string coldChainFlag = 26;
+    string idealDosage = 27;
 }
